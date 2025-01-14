@@ -1,42 +1,130 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eff2f5;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button Style */
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d315d;
+  border: none;
+  padding: 0.5rem 3.5rem;
+  background-color: #6d80c0;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btn-left {
+  border-radius: 0.2rem 0 0 0.2rem;
+
 }
+
+.btn-right {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.active {
+  color: #ffffff;
+  background-color: #207ae8;
+}
+
+/* card styles */
 
 .card {
-  padding: 2em;
+  width: 22rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
 }
 
-.read-the-docs {
-  color: #888;
+/* Textarea styles */
+textarea {
+  min-height: 100px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 2px solid #d2e4fa;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.9rem;
+
+}
+
+textarea::placeholder {
+  color: #d1d1d1;
+
+}
+
+/* Submit button styles */
+
+.submit-btn {
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+}
+
+.encrypt-btn {
+  color: #ffffff;
+  background-color: #207ae8;
+}
+
+.decrypt-btn {
+  color: #ffffff;
+  background-color: #ff4d4f;
+}
+
+
+.error {
+  color: #ff4d4f;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+
+.content-display {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+
+}
+
+.content-display label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.content-display p {
+  margin: 0;
+  color: #4b5563;
+  text-align: center;
+  line-height: 1.5;
 }
