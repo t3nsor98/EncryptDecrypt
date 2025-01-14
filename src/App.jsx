@@ -115,7 +115,22 @@ function App() {
       {(encryptedData || decryptedData) && (
         <div className="content-display">
           <label>{screen === "encrypt" ? "ENCRYPTED" : "DECRYPTED"}</label>
-          <p>{screen === "encrypt" ? encryptedData : decryptedData}</p>
+          <p
+            onClick={() => {
+              navigator.clipboard.writeText(
+                screen === "encrypt" ? encryptedData : decryptedData
+              );
+              alert("Copied to clipboard!");
+            }}
+            style={{
+              cursor: "pointer",
+              color: "#207ae8",
+              textDecoration: "underline",
+            }}
+            title="Click to copy"
+          >
+            {screen === "encrypt" ? encryptedData : decryptedData}
+          </p>
         </div>
       )}
     </div>
